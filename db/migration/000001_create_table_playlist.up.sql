@@ -1,5 +1,6 @@
 CREATE TABLE IF NOT EXISTS "playlist" (
     "id" serial PRIMARY KEY NOT NULL,
+    "name" VARCHAR NOT NULL,
     "created_at" timestamptz NOT NULL DEFAULT (now())
 );
 
