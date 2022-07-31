@@ -60,7 +60,7 @@ type deleteQueueRequest struct {
 
 func (server *Server) deleteQueue(ctx *gin.Context) {
 	var req deleteQueueRequest
-	err := ctx.ShouldBindUri(&req)
+	err := ctx.ShouldBindJSON(&req)
 	if err != nil {
 		ctx.JSON(http.StatusBadRequest, errorResponse(err))
 	}
